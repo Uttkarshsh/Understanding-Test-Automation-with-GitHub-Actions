@@ -1,0 +1,30 @@
+name: API Tests
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          sudo apt install python3 pipenv -y
+          pipenv install fastapi uvicorn pytest requests
+
+      - name: Start FastAPI server
+        run: pipenv run python3 app.py &
+        env:
+          PYTHONUNBUFFERED: 1
+
+      - name: Wait for server to be ready
+        run: sleep 5  # Wait to ensure the server is up
+
+      - name: Run tests
+        run: pipenv run pytest test_pytests.py
