@@ -7,8 +7,11 @@ This repository demonstrates how to set up a FastAPI backend, automate API testi
 🚀 Features
 
 ✅ FastAPI backend with basic mathematical operations (add, subtract, multiply)
+
 ✅ Automated API testing using Python's requests library and pytest
+
 ✅ CI/CD integration using GitHub Actions for automated testing on code changes
+
 ✅ Configurable GitHub Actions workflow for automated test execution
 
 📌 Prerequisites
@@ -48,8 +51,11 @@ Start the FastAPI server with the following command:
 🔗 API Endpoints
 
 📌 GET / - Returns a simple welcome message.
+
 📌 GET /add/{num1}/{num2} - Adds two numbers and returns the result.
+
 📌 GET /subtract/{num1}/{num2} - Subtracts two numbers and returns the result.
+
 📌 GET /multiply/{num1}/{num2} - Multiplies two numbers and returns the result.
 
 🛠 Running Tests
@@ -69,9 +75,13 @@ This repository includes a GitHub Actions workflow (.github/workflows/test.yml) 
 📌 Steps in the Workflow:
 
 1️⃣ Checkout the repository
+
 2️⃣ Set up Python environment
+
 3️⃣ Install dependencies
+
 4️⃣ Start the FastAPI server
+
 5️⃣ Run API tests using pytest
 
 📌 Setting up GitHub Actions
@@ -81,6 +91,7 @@ Push the changes to GitHub to trigger the CI/CD pipeline:
 git add .
 git commit -m "Add test automation and GitHub Actions"
 git push origin main
+
 
 ⚡ You can monitor the test execution under the Actions tab in your GitHub repository.
 
