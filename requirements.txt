@@ -1,0 +1,7 @@
+nginx
+Copy
+Edit
+fastapi
+uvicorn
+pytest
+requests
